@@ -1,0 +1,8 @@
+com\yufan\service\impl\ItemServiceImpl.class
+com\yufan\rpc\service\ItemCatRpcService.class
+com\yufan\service\ItemService.class
+com\yufan\redis\RedisServiceImpl.class
+com\yufan\redis\RedisService.class
+com\yufan\controller\ItemController.class
+com\yufan\controller\ItemCatController.class
+com\yufan\rpc\service\ItemRpcService.class

@@ -1,0 +1,11 @@
+com\yufan\bean\ItemDesc.class
+com\yufan\result\HttpClientUtil.class
+com\yufan\result\ResultUtils.class
+com\yufan\bean\Item.class
+com\yufan\bean\ItemCat.class
+com\yufan\utils\ResponseUtils.class
+com\yufan\utils\JsonUtils.class
+com\yufan\converter\DateConverter.class
+com\yufan\exception\CustomerHandlerException.class
+com\yufan\exception\CustomerException.class
+com\yufan\result\Result.class

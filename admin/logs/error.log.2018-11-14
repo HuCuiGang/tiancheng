@@ -1,0 +1,17 @@
+2018-11-14 10:48:17  [ main:1393 ] - [ ERROR ]  maxIdle is deprecated
+2018-11-14 10:51:45  [ main:1094 ] - [ ERROR ]  maxIdle is deprecated
+2018-11-14 11:07:43  [ PathWatcher@4e67cfe1:1623 ] - [ ERROR ]  maxIdle is deprecated
+2018-11-14 11:12:07  [ main:1445 ] - [ ERROR ]  maxIdle is deprecated
+2018-11-14 11:25:39  [ main:1357 ] - [ ERROR ]  maxIdle is deprecated
+2018-11-14 11:26:54  [ main:1088 ] - [ ERROR ]  maxIdle is deprecated
+2018-11-14 11:28:10  [ main:1014 ] - [ ERROR ]  maxIdle is deprecated
+2018-11-14 11:28:53  [ PathWatcher@113dcaf8:2045 ] - [ ERROR ]  maxIdle is deprecated
+2018-11-14 11:28:57  [ main:3593 ] - [ ERROR ]  maxIdle is deprecated
+2018-11-14 11:30:41  [ main:1456 ] - [ ERROR ]  maxIdle is deprecated
+2018-11-14 11:34:49  [ PathWatcher@7b91d9f:874 ] - [ ERROR ]  maxIdle is deprecated
+2018-11-14 11:36:18  [ PathWatcher@7b91d9f:784 ] - [ ERROR ]  maxIdle is deprecated
+2018-11-14 11:37:14  [ PathWatcher@7b91d9f:1080 ] - [ ERROR ]  maxIdle is deprecated
+2018-11-14 11:38:56  [ PathWatcher@7b91d9f:818 ] - [ ERROR ]  maxIdle is deprecated
+2018-11-14 11:42:02  [ main:9677 ] - [ ERROR ]  maxIdle is deprecated
+2018-11-14 12:03:46  [ main:3968 ] - [ ERROR ]  maxIdle is deprecated
+2018-11-14 12:15:46  [ main:1043 ] - [ ERROR ]  maxIdle is deprecated

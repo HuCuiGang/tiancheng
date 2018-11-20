@@ -1,0 +1,5 @@
+2018-11-16 11:15:36  [ main:2006 ] - [ ERROR ]  maxIdle is deprecated
+2018-11-16 11:24:25  [ PathWatcher@4c2bea52:1061 ] - [ ERROR ]  maxIdle is deprecated
+2018-11-16 14:38:37  [ localhost-startStop-1:1549 ] - [ ERROR ]  maxIdle is deprecated
+2018-11-16 15:16:59  [ localhost-startStop-1:1754 ] - [ ERROR ]  maxIdle is deprecated
+2018-11-16 16:18:35  [ main:2472 ] - [ ERROR ]  maxIdle is deprecated

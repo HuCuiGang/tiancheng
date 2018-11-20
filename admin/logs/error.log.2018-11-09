@@ -1,0 +1,7 @@
+2018-11-09 10:42:58  [ localhost-startStop-1:4824 ] - [ ERROR ]  maxIdle is deprecated
+2018-11-09 16:07:14  [ main:3671 ] - [ ERROR ]  maxIdle is deprecated
+2018-11-09 16:32:51  [ localhost-startStop-1:2202 ] - [ ERROR ]  maxIdle is deprecated
+2018-11-09 16:35:29  [ localhost-startStop-1:1257 ] - [ ERROR ]  maxIdle is deprecated
+2018-11-09 16:36:41  [ main:2363 ] - [ ERROR ]  maxIdle is deprecated
+2018-11-09 16:51:25  [ main:2719 ] - [ ERROR ]  maxIdle is deprecated
+2018-11-09 16:52:12  [ main:1695 ] - [ ERROR ]  maxIdle is deprecated
