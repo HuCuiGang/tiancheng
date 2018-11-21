@@ -1,5 +1,6 @@
 package com.yufan;
 
+import com.yufan.service.EmployeeService;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -8,7 +9,6 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.yufan.bean.Employee;
 import com.yufan.repository.EmployeeRepository;
-import com.yufan.service.EmployeeService;
 
 import java.util.Arrays;
 import java.util.List;

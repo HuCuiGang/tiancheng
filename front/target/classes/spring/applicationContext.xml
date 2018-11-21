@@ -8,9 +8,10 @@
 	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
 	
 	
-	   <import resource="applicationContext-service.xml"/>
-     <import resource="applicationContext-duubo.xml"/>
+	<import resource="applicationContext-service.xml"/>
+	<import resource="applicationContext-duubo.xml"/>
 	<import resource="applicationContext-redis.xml"/>
+	<import resource="applicationContext-jms.xml"/>
 	   
 
 	</beans>

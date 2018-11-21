@@ -65,6 +65,25 @@ public class UserController {
         return ResultUtils.buildSuccess(token);
     }
 
+    @RequestMapping(value = "/loginByPhone",method = RequestMethod.POST)
+    public Result loginByPhone(String phone,String code) throws CustomerException {
+        if(StringUtils.isEmpty(phone)){
+            LOGGER.info("电话号码不能为空!");
+            return ResultUtils.buildFail(110,"电话号码不能为空!");
+        }
+        if(StringUtils.isEmpty(code)){
+            LOGGER.info("验证码不能为空!");
+            return ResultUtils.buildFail(111,"验证码不能为空!");
+        }
+        String token=userService.loginByPhone(phone,code);
+        if(StringUtils.isEmpty(token)){
+            LOGGER.info("登录失败!");
+            return ResultUtils.buildFail(112,"验证码错误");
+        }
+        return ResultUtils.buildSuccess(token);
+    }
+
+
     private String getCheckInfo(BindingResult bindingResult) {
         //校验失败
         //取出失败信息

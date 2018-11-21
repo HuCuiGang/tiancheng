@@ -154,7 +154,63 @@ public class UserServiceImpl implements UserService {
         redisService.set(LOGIN+token,JsonUtils.objectToJson(user));
         //设置过期时间
         redisService.expire(LOGIN+token,60*60*2);
+        return dealLogin(user);
+    }
+
+    @Override
+    public String loginByPhone(String phone, String code) throws CustomerException {
+        if (StringUtils.isEmpty(phone)){
+            LOGGER.debug("电话号码不能为空！");
+            return null;
+        }
+        if(StringUtils.isEmpty(code)){
+            LOGGER.debug("验证码不能为空！");
+            return null;
+        }
+        User user =userRepository.findUserByPhone(phone);
+        if (user==null){
+            LOGGER.info("手机号码未注册{}",phone);
+            throw  new CustomerException("该手机号未注册");
+        }
+        //校验验证码
+        String serverCode=redisService.get(SmsServiceImpl.LOGIN_SMS+phone);
+        if (StringUtils.isEmpty(serverCode)){
+            LOGGER.info("该验证码已失效{}",phone);
+            throw new CustomerException("该验证码已失效");
+        }
+
+        //处理登录请求
+        return dealLogin(user);
+    }
+
+    private String dealLogin(User user) {
+        //生成最后登录的时间
+        user.setLastLoginTime(new Date());
+        userRepository.save(user);
+        //生成token
+        String token=createToken();
+        //处理登录
+        redisService.set(LOGIN+token,JsonUtils.objectToJson(user));
+        //设置过期时间
+        redisService.expire(LOGIN+token,60*60*2);
         return token;
+    }
+
+    @Override
+    public User queryUserByToken(String token) {
+       if (StringUtils.isEmpty(token)){
+           LOGGER.debug("token不能为空！");
+           return null;
+       }
+       String json = redisService.get(LOGIN+token);
+       if(StringUtils.isEmpty(json)){
+           LOGGER.info("登录失败，token为{}",token);
+           return null;
+       }
+       LOGGER.info("查询登录用户的信息为：{}",json);
+       //更新过期时间
+        redisService.expire(LOGIN+token,60*60*2);
+        return JsonUtils.jsonToPojo(json,User.class);
     }
 
     /**

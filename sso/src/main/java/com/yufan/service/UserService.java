@@ -19,5 +19,19 @@ public interface UserService {
      */
     public String login(String username,String password);
 
+    /**
+     *
+     * @param phone
+     * @param code
+     * @return 返回token
+     */
+    public String loginByPhone(String phone,String code) throws CustomerException;
+
+    /**
+     *
+     * @param token
+     * @return
+     */
+    public User queryUserByToken(String token);
 
 }

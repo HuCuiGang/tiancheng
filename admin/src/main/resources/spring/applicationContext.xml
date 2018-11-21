@@ -19,9 +19,10 @@
 	http://www.springframework.org/schema/util/spring-util-4.0.xsd">
 	
 	
-	   <import resource="applicationContext-dao.xml"/>
-	   <import resource="applicationContext-service.xml"/>
-	   <import resource="applicationContext-transaction.xml"/>
+		<import resource="applicationContext-dao.xml"/>
+		<import resource="applicationContext-service.xml"/>
+		<import resource="applicationContext-transaction.xml"/>
 		<import resource="applicationContext-duubo.xml"/>
+		<import resource="applicationContext-jms.xml"/>
 
 	</beans>
