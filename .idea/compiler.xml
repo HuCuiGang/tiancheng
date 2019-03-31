@@ -9,7 +9,6 @@
         <module name="admin" />
         <module name="core" />
         <module name="front" />
-        <module name="sso" />
       </profile>
     </annotationProcessing>
   </component>

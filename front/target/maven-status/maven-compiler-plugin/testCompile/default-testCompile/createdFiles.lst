@@ -1,3 +1,3 @@
-com\yufan\TestHttpClient.class
-com\yufan\TestLog.class
-com\yufan\TestRedis.class
+com/yufan/TestRedis.class
+com/yufan/TestLog.class
+com/yufan/TestHttpClient.class
