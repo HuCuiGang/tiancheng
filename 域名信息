@@ -1,0 +1,20 @@
+127.0.0.1	localhost
+127.0.1.1	hcg-Inspiron-3559
+127.0.0.1 admin.yufan.com
+127.0.0.1 image.yufan.com
+127.0.0.1 front.yufan.com
+127.0.0.1 www.yufan.com
+127.0.0.1 sso.yufan.com
+192.168.248.131 sso.xxkj.cn
+127.0.0.1 solr.yufan.com
+127.0.0.1 www.cdut.com
+127.0.0.1 www.tiancheng.com
+127.0.0.1 manage.xxkj.cn
+127.0.0.1 image.xxkj.cn
+0.0.0.0 account.jetbrains.com
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters

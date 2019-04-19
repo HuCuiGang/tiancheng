@@ -11,12 +11,12 @@
        	<div style="margin-left: 50px;margin-top: 50px;">
        		<div style="margin-bottom:20px;">
 	            <div>
-	            	用户名: <input name="username" class="easyui-textbox" data-options="required:true" style="width:200px;height:32px" value="admin"/>
+	            	用户名: <input name="username" class="easyui-textbox" data-options="required:true" style="width:200px;height:32px" />
 	            </div>
 	        </div>
 	        <div style="margin-bottom:20px">
 	            <div>
-	            	密&nbsp;&nbsp;码: <input name="password" class="easyui-textbox" type="password" style="width:200px;height:32px" data-options="" value="admin"/>
+	            	密&nbsp;&nbsp;码: <input name="password" class="easyui-textbox" type="password" style="width:200px;height:32px" data-options="" />
 	            </div>
 	        </div>
 	        <div>

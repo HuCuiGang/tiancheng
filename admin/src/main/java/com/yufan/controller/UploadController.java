@@ -23,7 +23,8 @@ public class UploadController {
     public PicUploadResult upload(@RequestParam  MultipartFile uploadFile) throws IOException {
 
         String imageUrl="http://image.yufan.com/";
-        String path="E:\\image";
+        //上传图片的路径
+        String path=File.separator+"home"+File.separator+"image";
 
         //获取文件的后缀
         String filename=uploadFile.getOriginalFilename();

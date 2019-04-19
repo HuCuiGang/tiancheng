@@ -1,0 +1,60 @@
+	upstream backserver { 
+		server 127.0.0.1:8081; 
+	} 
+	
+    	server {
+        listen       80;
+        server_name  localhost;
+
+        location / {
+            proxy_pass http://backserver;
+        }
+  
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+    }
+	
+	server {
+        listen       80;
+        server_name  image.yufan.com;
+
+        location / {
+            root E:\\image;
+        }
+  
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+    }
+	
+	server {
+        listen       80;
+        server_name  front.yufan.com;
+
+        location / {
+            proxy_pass http://127.0.0.1:8080;
+        }
+  
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+    }
+	
+	server {
+        listen       80;
+        server_name  sso.yufan.com;
+
+        location / {
+            proxy_pass http://127.0.0.1:8082;
+        }
+  
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+    }
+

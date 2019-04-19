@@ -8,7 +8,7 @@
 
 	<!--1.配置原厂家工厂-->
 	<bean id="activeMQConnectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
-		<property name="brokerURL" value="tcp://172.17.0.4:61616"/>
+		<property name="brokerURL" value="tcp://127.0.0.1:61616"/>
 		<property name="userName" value="admin"/>
 		<property name="password" value="admin"/>
 	</bean>
