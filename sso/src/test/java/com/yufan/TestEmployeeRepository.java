@@ -5,11 +5,13 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.yufan.bean.Employee;
 import com.yufan.repository.EmployeeRepository;
 
+import javax.persistence.criteria.*;
 import java.util.Arrays;
 import java.util.List;
 
@@ -126,4 +128,34 @@ public class TestEmployeeRepository {
     public void test12(){
         employeeService.update(80,3);
     }
+
+    public void test13(){
+        Specification specification = new Specification() {
+
+            /**
+             *
+             * @param root 我们需要查询的类型 Employee
+             * @param criteriaQuery 添加查询条件
+             * @param criteriaBuilder 构建条件
+             * @return
+             */
+            @Override
+            public Predicate toPredicate(Root root, CriteriaQuery criteriaQuery, CriteriaBuilder criteriaBuilder) {
+                //查询name为李并且age为10的员工信息
+                Path name = root.get("name");
+                Predicate equal1 = criteriaBuilder.equal(name,"李");
+
+                Path age = root.get("age");
+                Predicate equal = criteriaBuilder.equal(age, 10);
+
+                return criteriaBuilder.and(equal1,equal);
+            }
+        };
+        List<Employee> list = employeeRepository.findAll(specification);
+        System.out.println(list);
+
+    }
+
+
+
 }

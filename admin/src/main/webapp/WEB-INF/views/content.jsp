@@ -95,7 +95,7 @@ var contentListToolbar = [{
     	    if (r){
     	    	var params = {"ids":ids};
             	$.post("/rest/content/delete",params, function(data){
-        			if(data.status == 200){
+        			if(data.status == "success"){
         				$.messager.alert('提示','删除内容成功!',undefined,function(){
         					$("#contentList").datagrid("reload");
         				});

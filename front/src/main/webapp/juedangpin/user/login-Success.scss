@@ -1,0 +1,85 @@
+@import '../core/scss/normalize';
+@import '../core/scss/commonMixin';
+@import '../core/scss/globleVariable';
+@import '../core/scss/fontGeneral';
+@import '../core/scss/header-simple';
+@import '../core/scss/footer-simple';
+
+.content-box {
+  background: white;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+}
+.content {
+  @include bfc;
+  margin: 0 auto;
+  @include wh(1060px,600px);
+
+  .content-title{
+    margin-top: 120px;
+    height: 37px;
+    text-align: center;
+    line-height: 37px;
+    font-size: 23px;
+    background: url("../core/images/user/dui.png") no-repeat 420px 0;
+
+  }
+
+  .content-time{
+    margin-top: 60px;
+    font-size: 22px;
+    color: #999;
+    text-align: center;
+
+    span{
+      color: #bf0101;
+    }
+  }
+
+  .content-img{
+    margin-top: 110px;
+    height: 120px;
+
+    a{
+      float: left;
+      margin-left: 180px;
+      height: 162px;
+      width: 112px;
+      text-decoration:none;
+
+      span{
+        padding-top: 130px;
+        font-size: 15px;
+        display: block;
+        text-align: center;
+      }
+
+      &:hover > span{
+        color: #bf0101;
+      }
+    }
+
+    .content-index{
+      background: url("../core/images/user/s-index.png") no-repeat center 25%;
+
+      &:hover{
+        background: url("../core/images/user/s-index-red.png") no-repeat center 0;
+      }
+    }
+    .content-person{
+      background: url("../core/images/user/s-person.png") no-repeat center 25%;
+
+      &:hover{
+        background: url("../core/images/user/s-person-red.png") no-repeat center 0;
+      }
+    }
+    .content-buy{
+      background: url("../core/images/user/s-buy.png") no-repeat center 25%;
+
+      &:hover{
+        background: url("../core/images/user/s-buy-red.png") no-repeat center 0;
+      }
+
+    }
+  }
+}

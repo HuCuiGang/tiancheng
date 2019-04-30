@@ -7,6 +7,8 @@
        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
 
 
+    <!-- 不拦截静态资源  -->
+    <mvc:resources mapping="/juedangpin/**" location="/juedangpin/"/>
 
 	<!-- 扫描controller包 -->
 	<context:component-scan base-package="com.yufan.controller" />
@@ -14,7 +16,7 @@
 
 	
 	<!-- 注解驱动 -->
-     <mvc:annotation-driven conversion-service="conversionService"/>
+    <mvc:annotation-driven conversion-service="conversionService"/>
 
     <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
         <property name="converters">
@@ -24,14 +26,26 @@
 
 
     <!--配置统一异常处理器-->
-     <bean id="customerHandlerExceptio" class="com.yufan.exception.CustomerHandlerException"/>
-     
+    <bean id="customerHandlerException" class="com.yufan.exception.CustomerHandlerException"/>
 
-
+    <!-- 设置json视图,取消默认生成的根节点名字 -->
+    <bean id="jackson2JsonView" class="org.springframework.web.servlet.view.json.MappingJackson2JsonView">
+        <!-- ModelAndView默认会使用类名生成一个根节点名字，ResponseBody不会生成根节点，导致返回数据格式不一致 -->
+        <!-- 解决ResponseBody与ModelAndView返回数据格式不一致的情况。 -->
+        <!-- 返回数据时，控制直接序列化对象还是使用一个属性包裹 -->
+        <property name="extractValueFromSingleKeyModel" value="true" />
+    </bean>
 
     <bean id="multipartResolver"  class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
     <property name="defaultEncoding" value="UTF-8" />
     <!--上传限制为200M  -->
     <property name="maxUploadSize" value="209715200" />
     </bean>
+
+    <!-- 配置视图解析器 -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/views/"></property>
+        <property name="suffix" value=".jsp"></property>
+    </bean>
+
 </beans>

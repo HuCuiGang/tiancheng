@@ -2,7 +2,7 @@ package com.yufan.controller;
 
 import com.yufan.bean.ItemCat;
 
-import com.yufan.rpc.service.ItemCatRpcService;
+import com.yufan.service.ItemCatRpcService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

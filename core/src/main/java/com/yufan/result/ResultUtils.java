@@ -1,6 +1,8 @@
 package com.yufan.result;
 
 
+import com.yufan.enums.StatusCode;
+
 public class ResultUtils {
 
     /**
@@ -36,6 +38,19 @@ public class ResultUtils {
         Result result = new Result();
         result.setCode(code);
         result.setMessage(message);
+        result.setStatus("fail");
+        return result;
+    }
+
+    /**
+     * 构建失败信息
+     * @param statusCode 枚举类型
+     * @return
+     */
+    public static Result buildFail(StatusCode statusCode){
+        Result result = new Result();
+        result.setCode(statusCode.getCode());
+        result.setMessage(statusCode.getMessage());
         result.setStatus("fail");
         return result;
     }

@@ -1,8 +1,7 @@
+/home/hcg/桌面/STSDemo/tiancheng/front/src/main/java/com/yufan/controller/IndexController.java
 /home/hcg/桌面/STSDemo/tiancheng/front/src/main/java/com/yufan/controller/ItemCatController.java
 /home/hcg/桌面/STSDemo/tiancheng/front/src/main/java/com/yufan/service/ItemService.java
-/home/hcg/桌面/STSDemo/tiancheng/front/src/main/java/com/yufan/rpc/service/ItemCatRpcService.java
 /home/hcg/桌面/STSDemo/tiancheng/front/src/main/java/com/yufan/controller/ItemController.java
-/home/hcg/桌面/STSDemo/tiancheng/front/src/main/java/com/yufan/rpc/service/ItemRpcService.java
 /home/hcg/桌面/STSDemo/tiancheng/front/src/main/java/com/yufan/listener/CustomerMessageListener.java
 /home/hcg/桌面/STSDemo/tiancheng/front/src/main/java/com/yufan/redis/RedisServiceImpl.java
 /home/hcg/桌面/STSDemo/tiancheng/front/src/main/java/com/yufan/service/impl/ItemServiceImpl.java

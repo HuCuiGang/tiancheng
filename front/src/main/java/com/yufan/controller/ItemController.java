@@ -28,7 +28,7 @@ public class ItemController {
         return ResultUtils.buildSuccess(itemService.queryItemById(id));
     }
 
-    @RequestMapping(value ="/cache/{id}",method = RequestMethod.POST)
+    @RequestMapping(value ="/deleteCache/{id}",method = RequestMethod.POST)
     public Result deleteCache(@PathVariable("id")Long id){
         LOGGER.debug("查询的商品id为{}",id);
         itemService.deleteCache(id);

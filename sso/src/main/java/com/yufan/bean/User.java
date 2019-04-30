@@ -23,7 +23,7 @@ public class User {
 
     @NotEmpty(message = "密码不能为空")
     @Length(min =6,message = "密码最少6位")
-    @JsonIgnore
+    @JsonIgnore //json忽略
     private String password;
 
     @NotEmpty(message = "电话号码不能为空")
@@ -36,7 +36,7 @@ public class User {
     /**
      * 加密的盐
      */
-    @JsonIgnore
+    @JsonIgnore //json忽略
     private String salt;
 
     private Date created;

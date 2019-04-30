@@ -30,7 +30,7 @@ $(function(){
         		$.post("/rest/content/category/add",{parentId:node.parentId,name:node.text},function(data){
         			_tree.tree("update",{
         				target : node.target,
-        				id : data.id    //将临时id修改为正式id
+        				id : data.data    //将临时id修改为正式id
         			});
         		});
         	}else{

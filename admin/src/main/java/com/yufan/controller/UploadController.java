@@ -1,6 +1,8 @@
 package com.yufan.controller;
 
 import com.yufan.common.PicUploadResult;
+import com.yufan.config.GlobalProperties;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -18,13 +20,16 @@ import java.util.UUID;
 @Controller
 public class UploadController {
 
+    @Autowired
+    private GlobalProperties globalProperties;
+
     @RequestMapping(value = "/upload",method = RequestMethod.POST)
     @ResponseBody
     public PicUploadResult upload(@RequestParam  MultipartFile uploadFile) throws IOException {
 
-        String imageUrl="http://image.yufan.com/";
+        String imageUrl=globalProperties.getUrl();
         //上传图片的路径
-        String path=File.separator+"home"+File.separator+"image";
+        String path=globalProperties.getPath();
 
         //获取文件的后缀
         String filename=uploadFile.getOriginalFilename();

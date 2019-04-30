@@ -12,5 +12,6 @@ public interface RedisService {
     public long del(String key);//删除指定的键
     public long hdel(String hkey,String key);//删除hash指定的key
     public long expire(String key,int time);//设置过期时间
+    public Boolean exists(String keyName);//判断key是否存在
 
 }

@@ -2,6 +2,7 @@ package com.yufan.repository;
 
 import com.yufan.bean.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -9,8 +10,7 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 //@RepositoryDefinition(domainClass = Employee.class,idClass = Integer.class)
-public interface EmployeeRepository extends JpaRepository<Employee,Integer>  //
- {
+public interface EmployeeRepository extends JpaRepository<Employee,Integer>, JpaSpecificationExecutor<Employee> {
 
 
     public Employee findEmployeeByName(String name);

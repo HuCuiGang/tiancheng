@@ -12,7 +12,7 @@
 	http://www.springframework.org/schema/util/spring-util-4.0.xsd">
 
 	<!-- 加载properties文件 -->
-	<context:property-placeholder location="classpath:config/jdbc.properties" />
+	<context:property-placeholder location="classpath:config/jdbc.properties,classpath:config/config.properties" />
 
 	<!-- 配置数据库连接池 -->
 	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">

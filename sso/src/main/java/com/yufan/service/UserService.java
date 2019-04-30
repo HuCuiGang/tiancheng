@@ -17,7 +17,7 @@ public interface UserService {
      * @param password
      * @return  返回token
      */
-    public String login(String username,String password);
+    public String login(String username,String password) throws CustomerException;
 
     /**
      *
@@ -32,6 +32,6 @@ public interface UserService {
      * @param token
      * @return
      */
-    public User queryUserByToken(String token);
+    public User queryUserByToken(String token) throws CustomerException;
 
 }

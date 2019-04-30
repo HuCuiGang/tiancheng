@@ -13,11 +13,12 @@
     <dubbo:protocol name="dubbo" port="20880" />
 
     <!-- 声明需要暴露的服务接口 -->
-    <dubbo:service interface="com.yufan.rpc.service.ItemRpcService" ref="itemRpcService" />
-    <dubbo:service interface="com.yufan.rpc.service.ItemCatRpcService" ref="itemCatRpcService" />
+    <dubbo:service interface="com.yufan.service.ItemRpcService" ref="itemRpcService" />
+    <dubbo:service interface="com.yufan.service.ItemCatRpcService" ref="itemCatRpcService" />
 
     <!-- 和本地bean一样实现服务 -->
-    <bean id="itemRpcService" class="com.yufan.rpc.service.impl.ItemRpcServiceImpl" />
-    <bean id="itemCatRpcService" class="com.yufan.rpc.service.impl.ItemCatRpcServiceImpl" />
+    <!-- 已用注解实现 -->
+    <!--<bean id="itemRpcService" class="com.yufan.rpc.service.impl.ItemRpcServiceImpl" />
+    <bean id="itemCatRpcService" class="com.yufan.rpc.service.impl.ItemCatRpcServiceImpl" />-->
 
 </beans>

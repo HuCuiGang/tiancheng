@@ -25,4 +25,6 @@
 		<import resource="applicationContext-duubo.xml"/>
 		<import resource="applicationContext-jms.xml"/>
 
+		<bean class="com.yufan.config.GlobalProperties" />
+
 	</beans>

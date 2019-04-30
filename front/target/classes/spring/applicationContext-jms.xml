@@ -39,6 +39,13 @@
 		<property name="destinationName" value="item_cache"/>
 		<!--3.注入监听器-->
 		<property name="messageListener" ref="customerMessageListener"/>
+		<!--4.事物签收机制-->
+		<property name="sessionTransacted" value="false"/>
+		<!--5.签收方式-->
+		<property name="sessionAcknowledgeMode" value="2"/>
+		<!--6.接收超时时间 10秒-->
+		<property name="receiveTimeout" value="10000"/>
+
 	</bean>
 
 

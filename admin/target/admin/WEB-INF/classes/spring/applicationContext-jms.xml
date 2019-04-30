@@ -34,8 +34,13 @@
 		<property name="connectionFactory" ref="connectionFactory"/>
 		<!--配置默认发送的目标-->
 		<property name="defaultDestinationName" value="item_cache"/>
+		<!--设置持久化-->
+		<property name="deliveryMode" value="2"/>
+		<!--关闭事物-->
+		<property name="sessionTransacted" value="false"/>
+		<!--手动签收-->
+		<property name="sessionAcknowledgeModeName" value="CLIENT_ACKNOWLEDGE"/>
 	</bean>
-
 
 
 </beans>

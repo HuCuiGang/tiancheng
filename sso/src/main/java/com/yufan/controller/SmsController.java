@@ -1,6 +1,6 @@
 package com.yufan.controller;
 
-import com.sun.org.apache.bcel.internal.generic.LOOKUPSWITCH;
+import com.yufan.enums.StatusCode;
 import com.yufan.exception.CustomerException;
 import com.yufan.result.Result;
 import com.yufan.result.ResultUtils;
@@ -25,7 +25,12 @@ public class SmsController {
 
     @RequestMapping(value = "/login/{phone}",method = RequestMethod.GET)
     public Result sendLoginSms(@PathVariable("phone") String phone) throws CustomerException {
+        //校验电话号码格式
+        if(!phone.matches("^((13[0-9])|(14[5,7,9])|(15([0-3]|[5-9]))|(166)|(17[0,1,3,5,6,7,8])|(18[0-9])|(19[8|9]))\\d{8}$")){
+            return ResultUtils.buildFail(StatusCode.PHONE_TYPE_FAIL);
+        }
         LOGGER.info("发送短信的手机号码为{}",phone);
+
         smsService.sendLoginSms(phone);
         return ResultUtils.buildSuccess();
     }

@@ -12,19 +12,36 @@
 	<context:component-scan base-package="com.yufan.controller" />
 
 
-	
-	<!-- 注解驱动 -->
-     <mvc:annotation-driven conversion-service="conversionService"/>
+    <!-- 配置注解驱动 -->
+    <mvc:annotation-driven conversion-service="conversionService">
+        <mvc:message-converters register-defaults="true">
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                <constructor-arg index="0" value="UTF-8" />
+            </bean>
 
+            <bean class="com.yufan.converter.CallbackMappingJackson2HttpMessageConverter">
+                <property name="callbackName" value="callback" />
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+    <!-- 日期转换器 -->
     <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
         <property name="converters">
-                <bean class="com.yufan.converter.DateConverter"></bean>
+            <bean class="com.yufan.converter.DateConverter"></bean>
         </property>
     </bean>
-
-
+	 
     <!--配置统一异常处理器-->
-     <bean id="customerHandlerExceptio" class="com.yufan.exception.CustomerHandlerException"/>
+    <bean id="customerHandlerException" class="com.yufan.exception.CustomerHandlerException"/>
+
+    <!-- 设置json视图,取消默认生成的根节点名字 -->
+	<bean id="jackson2JsonView" class="org.springframework.web.servlet.view.json.MappingJackson2JsonView">
+		<!-- ModelAndView默认会使用类名生成一个根节点名字，ResponseBody不会生成根节点，导致返回数据格式不一致 -->
+		<!-- 解决ResponseBody与ModelAndView返回数据格式不一致的情况。 -->
+		<!-- 返回数据时，控制直接序列化对象还是使用一个属性包裹 -->	
+		<property name="extractValueFromSingleKeyModel" value="true" />
+	</bean>
      
 
 

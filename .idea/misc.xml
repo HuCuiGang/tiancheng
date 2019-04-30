@@ -5,7 +5,6 @@
     <file type="web" url="file://$PROJECT_DIR$/admin" />
     <file type="web" url="file://$PROJECT_DIR$/front" />
     <file type="web" url="file://$PROJECT_DIR$/sso" />
-    <type id="Spring" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">

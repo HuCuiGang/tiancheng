@@ -34,5 +34,11 @@ public class TestUserService {
             e.printStackTrace();
         }
     }
+    @Test
+    public void test1(){
+        Integer i=2;
+        Integer y=4;
+        System.out.println("----------------------------------------------------------------------------------"+(i>y));
+    }
 
 }

@@ -19,5 +19,4 @@
 	<!--配置springdatajpa-->
 	<jpa:repositories base-package="com.yufan" entity-manager-factory-ref="entityManagerFactory"/>
 
-	<context:component-scan base-package="com.yufan"/>
 	</beans>

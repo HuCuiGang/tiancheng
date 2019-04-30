@@ -92,4 +92,12 @@ public class RedisServiceImpl implements RedisService{
         jedis.close();
         return result;
     }
+
+    @Override
+    public Boolean exists(String keyName) {
+        Jedis jedis = getJedis();
+        Boolean result = jedis.exists(keyName);
+        jedis.close();
+        return result;
+    }
 }
